@@ -26,4 +26,13 @@ router.post("/login", (req, res, next) => {
 
 }, userController.login);
 router.post("/register", userController.register);
+
+/* FORGOT PASSWORD - send OTP */
+router.post("/forgot-password", userController.forgotPassword);
+
+/* VERIFY OTP */
+router.post("/verify-otp", userController.verifyOTP);
+
+/* RESET PASSWORD */
+router.post("/reset-password", userController.resetPassword);
 module.exports = router;
